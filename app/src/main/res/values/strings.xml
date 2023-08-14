@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">KHIDIContest</string>
+    <string name="filter_title">filtername</string>
+    <string name="number_of_hospital">총: 5건</string>
+</resources>
