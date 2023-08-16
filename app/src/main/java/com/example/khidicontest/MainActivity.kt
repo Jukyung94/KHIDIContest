@@ -3,10 +3,9 @@ package com.example.khidicontest
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.TextView
+import android.os.Handler
+import android.os.Looper
 import com.example.khidicontest.databinding.ActivityMainBinding
-import java.io.BufferedReader
-import java.io.InputStream
 
 class MainActivity : AppCompatActivity() {
 
@@ -18,9 +17,10 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        binding.enterButton.setOnClickListener {
-            listIntent = Intent(this, SearchHospitalActivity::class.java)
-            startActivity(listIntent)
-        }
+        Handler(Looper.getMainLooper()).postDelayed({
+            val intent = Intent(this, IntroActivity::class.java)
+            startActivity(intent)
+            finish() // 이전 화면 종료 (선택적)
+        }, 1000) // 1초 (1000ms) 후에 실행
     }
 }

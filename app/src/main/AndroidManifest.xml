@@ -2,10 +2,12 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     package="com.example.khidicontest">
-    
+
     <permission android:name="android.permission.INTERNET" />
     <permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
 
     <application
         android:allowBackup="true"
@@ -18,10 +20,25 @@
         android:theme="@style/Theme.KHIDIContest"
         tools:targetApi="31">
         <activity
+            android:name=".HelpActivity"
+            android:exported="false" />
+        <activity
+            android:name=".IntroActivity"
+            android:exported="false" />
+        <activity
+            android:name=".AccommodationInfo"
+            android:exported="false" />
+        <activity
             android:name=".HospitalDetailActivity"
             android:exported="false" />
         <activity
             android:name=".HospitalListActivity"
+            android:exported="false" />
+        <activity
+            android:name=".SearchHospitalActivity"
+            android:exported="false" />
+        <activity
+            android:name=".intropage"
             android:exported="false" />
         <activity
             android:name=".SearchHospitalActivity"
@@ -43,7 +60,6 @@
         <meta-data
             android:name="com.google.android.geo.API_KEY"
             android:value="${MAPS_API_KEY}" />
-
     </application>
 
 </manifest>
